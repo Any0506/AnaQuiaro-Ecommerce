@@ -7,7 +7,6 @@ const NavBar = () => {
         <nav>
             <div className="logo">
                 <img src={logo} alt="Mi Tienda" />
-                Mi Tienda
             </div>
             <ul>
                 <li><a href="#home">Inicio</a></li>
