@@ -1,15 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import Item from "./Item";
+import "./ItemList.css";  // Importamos estilos
 
-const ItemList = ({ products }) => {
+const ItemList = ({ productos }) => {
   return (
-    <div>
-      {products.map(product => (
-        <div key={product.id}>
-          <Link to={`/product/${product.id}`}>
-            <h3>{product.name}</h3>
-          </Link>
-        </div>
+    <div className="item-list-grid">
+      {productos.map((producto) => (
+        <Item key={producto.id} producto={producto} />
       ))}
     </div>
   );

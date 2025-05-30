@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffecec; /* color suave pastel */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .navbar__logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #ff6f91; /* rosa bebé */
+    cursor: default;
+  }  

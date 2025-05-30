@@ -1,39 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import ItemList from './ItemList';
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { fetchProducts, fetchProductsByCategory } from "../firebase/firestore";
+import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
-  const { categoryId } = useParams();
-  const [products, setProducts] = useState([]);
+  const { category } = useParams(); // recibe "ropa", "juguetes", etc.
+  const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
-    setTimeout(() => {
-      const allProducts = [
-        { id: 1, name: 'Ranita', category: 'boy' },
-        { id: 2, name: 'Body', category: 'girl' },
-        { id: 3, name: 'Dona', category: 'mother' },
-      ];
+    fetchProductsByCategory(category)
+      .then((data) => {
+        setProductos(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error cargando productos:", error);
+        setLoading(false);
+      });
+  }, [category]);
 
-      const filteredProducts = categoryId
-        ? allProducts.filter(product => product.category === categoryId)
-        : allProducts;
+  if (loading) return <p>Cargando productos...</p>;
+  if (productos.length === 0) return <p>No hay productos para mostrar.</p>;
 
-      setProducts(filteredProducts);
-      setLoading(false);
-    }, 2000); 
-  }, [categoryId]);
-
-  return (
-    <div>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <ItemList products={products} />
-      )}
-    </div>
-  );
+  return <ItemList productos={productos} />;
 };
 
 export default ItemListContainer;

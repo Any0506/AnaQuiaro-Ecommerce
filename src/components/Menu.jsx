@@ -1,17 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import "./Menu.css";
 
 const Menu = () => {
-  const categories = ['Boy', 'Girl', 'Mother'];  
-
   return (
-    <nav>
+    <nav className="menu">
       <ul>
-        {categories.map((category, index) => (
-          <li key={index}>
-            <Link to={`/category/${category.toLowerCase()}`}>{category}</Link>
-          </li>
-        ))}
+        <li><Link to="/category/ropa">Ropa</Link></li>
+        <li><Link to="/category/juguetes">Juguetes</Link></li>
+        <li><Link to="/category/higiene">Higiene</Link></li>
+        <li><Link to="/category/accesorios">Accesorios</Link></li>
+        <li><Link to="/category/alimentacion">Alimentación</Link></li>
+        <li><Link to="/category/ofertas">Ofertas</Link></li>
       </ul>
     </nav>
   );

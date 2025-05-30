@@ -1,0 +1,60 @@
+[
+
+    {
+      "name": "Biberón de Perlas",
+      "category": "alimentacion",
+      "description": "Lindo Biberón de Perlas.",
+      "price": 3200,
+      "stock": 15,
+      "image": "https://pixabay.com/es/photos/perlas-de-amor-perlas-dulzura-54610/"
+    },
+    {
+      "name": "Jirafa de madera ecológica",
+      "category": "juguetes",
+      "description": "Juguete seguro para recién nacidos con pintura no tóxica.",
+      "price": 2700,
+      "stock": 10,
+      "image": "https://cdn.pixabay.com/photo/2016/05/04/11/25/giraffe-1371203_1280.jpg"
+    },
+    {
+      "name": "Peluche Perrito Hipoalergenico",
+      "category": "juguetes",
+      "description": "Peluche de perrito seguro para recién nacidos hechos en felpa de algodón.",
+      "price": 2700,
+      "stock": 10,
+      "image": "https://cdn.pixabay.com/photo/2015/11/20/17/51/stuffed-animal-1053580_1280.jpg"
+    },
+    {
+      "name": "Vaca Perrito Hipoalergenico",
+      "category": "juguetes",
+      "description": "Peluche de vaca seguro para recién nacidos hechos en felpa de algodón.",
+      "price": 2700,
+      "stock": 10,
+      "image": "https://cdn.pixabay.com/photo/2016/03/26/22/22/happy-1281590_1280.jpg"
+    },
+    {
+      "name": "Bañera",
+      "category": "higiene",
+      "description": "Bañero de silicona.",
+      "price": 3900,
+      "stock": 25,
+      "image": "https://cdn.pixabay.com/photo/2019/04/07/22/26/strawberries-4110921_1280.jpg"
+
+    },
+    {
+      "name": "Nido de plumas Hipoalergenicas",
+      "category": "accesorios",
+      "description": "Hermoso nido.",
+      "price": 21500,
+      "stock": 5,
+      "image": "https://cdn.pixabay.com/photo/2017/02/02/09/36/baby-2032302_1280.jpg"
+    },
+    {
+      "name": "Movil para cuna",
+      "category": "ofertas",
+      "description": "Hermoso movil para cuan de bebe",
+      "price": 8800,
+      "stock": 8,
+      "image": "https://cdn.pixabay.com/photo/2017/06/27/17/07/mobile-forest-2448103_1280.jpg"
+    }
+]
